@@ -1,0 +1,65 @@
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18pt;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*NAVIGATION*/
+
+nav {
+  width: 100%;
+  background-color: dimgray;
+  color: white;
+}
+
+.navItem {
+  float: left;
+  list-style-type: none;
+  padding: 1.5em;
+}
+
+.navItem:hover {
+  background-color: darkgray;
+}
+
+.active {
+  background-color: midnightblue;
+}
+
+@media screen and (min-width: 1000px) {
+  nav {
+    width: 160px;
+    position: fixed;
+    height: 100%;
+  }
+
+  .navItem {
+    float: none;
+  }
+}
+
+/*CONTENT*/
+
+.content {
+  display: none;
+  width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .content {
+    margin-left: 170px;
+  }
+}
+
+.unmask {
+  display: block;
+}
