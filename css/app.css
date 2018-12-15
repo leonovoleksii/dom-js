@@ -62,3 +62,9 @@ nav {
 .unmask {
   display: block;
 }
+
+img {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+}
