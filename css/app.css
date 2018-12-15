@@ -5,8 +5,8 @@ body, ul {
 
 body {
   font-size: 18pt;
-  background-color: midnightblue;
-  color: white;
+  background-color: azure;
+  color: rgba(10, 14, 16, 0.92);
 }
 
 .container {
@@ -30,8 +30,14 @@ nav {
   cursor: pointer;
 }
 
+.navItem:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .active {
-  background-color: midnightblue;
+  background-color: azure;
+  color: rgba(10, 14, 16, 0.92);
 }
 
 @media screen and (min-width: 1000px) {
