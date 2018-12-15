@@ -6,6 +6,7 @@ body, ul {
 body {
   font-size: 18pt;
   background-color: midnightblue;
+  color: white;
 }
 
 .container {
@@ -26,10 +27,7 @@ nav {
   float: left;
   list-style-type: none;
   padding: 1.5em;
-}
-
-.navItem:hover {
-  background-color: darkgray;
+  cursor: pointer;
 }
 
 .active {

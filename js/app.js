@@ -64,3 +64,13 @@ let fillTheContent = function() {
 };
 
 fillTheContent();
+
+let buttons = document.querySelector('nav ul');
+buttons.addEventListener('click', function(event) {
+    let but = event.target;
+    let activeBut = buttons.querySelector('.navItem.active');
+    if (but !== activeBut) {
+        but.className += ' active';
+        activeBut.className = 'navItem';
+    }
+});
