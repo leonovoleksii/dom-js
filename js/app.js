@@ -1,4 +1,4 @@
-let arr = [
+const content = [
     {
         h1: 'What is Lorem Ipsum?',
         p: ['Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the' +
@@ -45,4 +45,22 @@ let arr = [
             'always free from repetition, injected humour, or non-characteristic words etc.'
         ]
     }
-]
+];
+
+let fillTheContent = function() {
+    const divs = document.querySelectorAll('.content');
+    for (let i = 0; i < divs.length; i++) {
+        let div = divs[i];
+        let elem;
+        for (elem in content[i]) {
+            if (content[i].hasOwnProperty(elem)) {
+                let element = document.createElement(elem);
+                let node = document.createTextNode(content[i][elem]);
+                element.appendChild(node);
+                div.appendChild(element);
+            }
+        }
+    }
+};
+
+fillTheContent();
