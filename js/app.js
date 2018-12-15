@@ -92,7 +92,7 @@ buttons.addEventListener('click', function(event) {
     let but = event.target;
     let activeBut = buttons.querySelector('.navItem.active');
 
-    if (but !== activeBut) {
+    if (but.nodeName.toLowerCase() === 'li' && but !== activeBut) {
         but.classList.toggle('active');
         activeBut.classList.remove('active');
         changeTheContent(but, activeBut);
