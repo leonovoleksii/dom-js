@@ -80,6 +80,7 @@ fillTheContent();
 
 let buttons = document.querySelector('nav ul');
 buttons.addEventListener('click', function(event) {
+
     let changeTheContent = function(button, activeButton) {
         const divs = document.querySelectorAll('.content');
         let butInx = Number(button.getAttribute('inx'));
@@ -92,8 +93,8 @@ buttons.addEventListener('click', function(event) {
     let activeBut = buttons.querySelector('.navItem.active');
 
     if (but !== activeBut) {
-        but.className += ' active';
-        activeBut.className = 'navItem';
+        but.classList.toggle('active');
+        activeBut.classList.remove('active');
         changeTheContent(but, activeBut);
     }
 });
