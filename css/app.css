@@ -31,8 +31,7 @@ nav {
 }
 
 .navItem:hover {
-  text-decoration: underline;
-  font-weight: bold;
+  color: cadetblue;
 }
 
 .active {
