@@ -67,10 +67,20 @@ fillTheContent();
 
 let buttons = document.querySelector('nav ul');
 buttons.addEventListener('click', function(event) {
+    let changeTheContent = function(button, activeButton) {
+        const divs = document.querySelectorAll('.content');
+        let butInx = Number(button.getAttribute('inx'));
+        let actButInx = Number(activeButton.getAttribute('inx'));
+        divs[butInx].className += ' unmask';
+        divs[actButInx].className = 'content';
+    };
+
     let but = event.target;
     let activeBut = buttons.querySelector('.navItem.active');
+
     if (but !== activeBut) {
         but.className += ' active';
         activeBut.className = 'navItem';
+        changeTheContent(but, activeBut);
     }
 });
